@@ -7,12 +7,26 @@
 </head>
 
 <body>
-<canvas id="myCanvas" width="1000" height="800"><p>Your browser does not support HTML5!</p></canvas>
+<canvas id="myCanvas"><p>Your browser does not support HTML5!</p></canvas>
 
 <script src=".js/scripts.js"> </script>
 <script type="text/javascript">
+  window.onload=function(){
+    init();
+    window.addEventListener('resize', init,false);
 
-	var canvas = document.getElementById("myCanvas");
+  }
+  function init(){
+    var ltpc = document.getElementById('myCanvas');
+    var context = ltpc.getContext('2d');
+    var myWidth = window.innerWidth -5;
+    var myHeight = window.innerHeight -5;
+    context.canvas.width = myWidth;
+    context.canvas.height = myHeight;
+    context.fillStyle = '#000FFF';
+    context.fillRect(0,0,myWidth,myHeight);
+  }
+  var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext("2d");
 
 	var width = canvas.getAttribute('width');

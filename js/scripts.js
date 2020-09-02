@@ -1,23 +1,15 @@
-(function() {
-  var canvas = document.getElementById('canvas'),
-          context = canvas.getContext('2d');
+window.onload=function(){
+  init();
+  window.addEventListener('resize', init,false);
 
-  // resize the canvas to fill browser window dynamically
-  window.addEventListener('resize', resizeCanvas, false);
-
-  function resizeCanvas() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-
-          /**
-           * Your drawings need to be inside this function otherwise they will be reset when
-           * you resize the browser window and the canvas goes will be cleared.
-           */
-          drawStuff();
-  }
-  resizeCanvas();
-
-  function drawStuff() {
-          // do your drawing stuff here
-  }
-})();
+}
+function init(){
+  var ltpc = document.getElementById('myCanvas');
+  var context = ltpc.getContext('2d');
+  var myWidth = window.innerWidth -5;
+  var myHeight = window.innerHeight -5;
+  context.canvas.width = myWidth;
+  cotext.canvas.height = myHeight;
+  context.fillStyle = '#000FFF';
+  context.fillRect(0,0,myWidth,myHeight);
+}

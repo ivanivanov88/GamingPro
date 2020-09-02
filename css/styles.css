@@ -1,5 +1,65 @@
-* { margin:0; padding:0; } /* to remove the top and left whitespace */
+#main-play-area {
+  width: 400px;
+  height: 400px;
+  background-image: url('images/space-6.png');
 
-html, body { width:100%; height:100%; } /* just to be sure these are full screen*/
+}
 
-canvas { display:block; } /* To remove the scrollbars */
+#instructions-text {
+  position: relative;
+  color: white;
+  left: 35px;
+  top: 0px;
+  text-shadow: 2px 2px black;
+}
+
+#start-button {
+  position: relative;
+  color: white;
+  left: 140px;
+  top: 80px;
+  text-shadow: 2px 2px black;
+}
+
+#start-button:hover {
+  cursor: pointer;
+}
+
+#player-controlled-shooter {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 20px;
+  top: 180px;
+}
+
+.laser {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.monster {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+       0 0 6px 3px #fff,
+       0 0 5px 6px #f0f,
+       0 0 9px 9px #0ff;
+}
+
+.monster-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+
+.dead-monster {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+}
