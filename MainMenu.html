@@ -131,13 +131,15 @@
 		}
 	}
 	function checkClick(mouseEvent){
+    if(mouseX > buttonX[0] && mouseX < buttonX[0] + buttonWidth[0]){
+      if(mouseY > buttonY[0] && mouseY < buttonY[0] + buttonHeight[0])
+      {
+        location.href = "file:///C:/Users/JIMMY/github/GamingPro/Test.html"
+      }
+    }
 		for(i = 0; i < buttonX.length; i++){
 			if(mouseX > buttonX[i] && mouseX < buttonX[i] + buttonWidth[i]){
 				if(mouseY > buttonY[i] && mouseY < buttonY[i] + buttonHeight[i]){
-
-              location.href = "file:///C:/Users/JIMMY/github/GamingPro/Test.html"
-
-
 					fadeId = setInterval("fadeOut()", 1000/frames);
 					clearInterval(timerId);
 					canvas.removeEventListener("mousemove", checkPos);
