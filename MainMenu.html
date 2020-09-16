@@ -134,6 +134,10 @@
 		for(i = 0; i < buttonX.length; i++){
 			if(mouseX > buttonX[i] && mouseX < buttonX[i] + buttonWidth[i]){
 				if(mouseY > buttonY[i] && mouseY < buttonY[i] + buttonHeight[i]){
+
+              location.href = "file:///C:/Users/JIMMY/github/GamingPro/Test.html"
+
+
 					fadeId = setInterval("fadeOut()", 1000/frames);
 					clearInterval(timerId);
 					canvas.removeEventListener("mousemove", checkPos);
