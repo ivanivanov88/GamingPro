@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
 <title>Shoot 'Em Up</title>
-<script type="text/javascript" src="jquery-3.3.1.js"></script>
-<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-<canvas id="myCanvas"><p>Your browser does not support HTML5!</p></canvas>
-
-<script src=".js/scripts.js"> </script>
+<canvas id="myCanvas" width="480" height="320"><p>Your browser does not support HTML5!</p></canvas>
 <script type="text/javascript">
-  window.onload=function(){
-    init();
-    window.addEventListener('resize', init,false);
-
-  }
-  function init(){
-    var ltpc = document.getElementById('myCanvas');
-    var context = ltpc.getContext('2d');
-    var myWidth = window.innerWidth -5;
-    var myHeight = window.innerHeight -5;
-    context.canvas.width = myWidth;
-    context.canvas.height = myHeight;
-    context.fillStyle = '#000FFF';
-    context.fillRect(0,0,myWidth,myHeight);
-  }
-  var canvas = document.getElementById("myCanvas");
+	var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext("2d");
 
 	var width = canvas.getAttribute('width');
@@ -176,6 +155,6 @@
 		}
 	}
 </script>
-</body>
 
-</html>
+
+ </body></html>
